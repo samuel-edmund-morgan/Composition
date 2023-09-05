@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+
     tools:context=".presentation.GameFinishedFragment"
     >
 
@@ -79,6 +79,7 @@
         android:id="@+id/button_retry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="@string/retry"
         app:layout_constraintBottom_toBottomOf="parent"
         />
