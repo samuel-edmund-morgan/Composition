@@ -6,24 +6,14 @@ plugins {
 
 }
 
-buildscript {
-    repositories {
-        google()
-    }
-    dependencies {
-        val navVersion = "2.7.1"
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$navVersion")
-    }
-}
-
 android {
     namespace = "com.example.composition"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.composition"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -39,10 +29,6 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -51,20 +37,20 @@ android {
     }
 }
 
-dependencies {
-    val navVersion = "2.7.1"
 
-    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
-    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+dependencies {
+
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.1")
 
     // Feature module Support
-    implementation("androidx.navigation:navigation-dynamic-features-fragment:$navVersion")
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.7.1")
 
     // Testing Navigation
-    androidTestImplementation("androidx.navigation:navigation-testing:$navVersion")
+    androidTestImplementation("androidx.navigation:navigation-testing:2.7.1")
 
     // Jetpack Compose Integration
-    implementation("androidx.navigation:navigation-compose:$navVersion")
+    implementation("androidx.navigation:navigation-compose:2.7.1")
 
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
