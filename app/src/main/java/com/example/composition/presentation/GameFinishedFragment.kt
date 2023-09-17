@@ -33,7 +33,8 @@ class GameFinishedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupClickListeners()
-        bindViews()
+        binding.gameResult = gameResult
+
     }
 
     override fun onDestroyView() {
@@ -41,17 +42,11 @@ class GameFinishedFragment : Fragment() {
         _binding = null
     }
 
-    private fun bindViews(){
-        binding.gameResult = gameResult
-    }
-
-
     private fun setupClickListeners(){
         binding.buttonRetry.setOnClickListener {
             retryGame()
         }
     }
-
 
     private fun retryGame(){
         findNavController().popBackStack()
