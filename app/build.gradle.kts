@@ -3,6 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs")
+
 
 }
 
@@ -33,13 +35,14 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures{
-        viewBinding = true
+        dataBinding = true
     }
 }
 
 
 dependencies {
 
+    // Kotlin
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.1")
 
