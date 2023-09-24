@@ -46,9 +46,6 @@ private fun getPercentOfRightAnswers(gameResult: GameResult) : Int{
         ((gameResult.countOfRightAnswers / gameResult.countOfQuestions.toDouble()) * 100).toInt()
 }
 
-
-
-
 @BindingAdapter("setImage")
 fun bindSetImage(imageView: ImageView, gameResult: GameResult){
     imageView.setImageResource(getSmileResId(gameResult))

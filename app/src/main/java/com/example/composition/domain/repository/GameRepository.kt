@@ -4,10 +4,10 @@ import com.example.composition.domain.entity.GameSettings
 import com.example.composition.domain.entity.Level
 import com.example.composition.domain.entity.Question
 
-interface GameRepository {
-    fun generateQuestion(
+public interface GameRepository {
+    public fun generateQuestion(
         maxSumValue: Int,
         countOfOptions: Int
     ): Question
-    fun getGameSettings(level: Level) : GameSettings
+    public fun getGameSettings(level: Level) : GameSettings
 }
